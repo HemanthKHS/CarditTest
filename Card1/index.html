@@ -1,0 +1,185 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>CardIt</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta name="viewport" content="width=device-width" />
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/814725565c.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-storage.js"></script>
+
+
+  <link rel="stylesheet" href="./form.css">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <link rel="stylesheet" href="./extra.css">
+  <link rel="stylesheet" href="./cardStyle.css">
+</head>
+
+<body>
+  <div id='url-div'>
+</div>
+  <div id='template' >
+    <div id='template-cart'>
+      <h3><span id='url-text'> </span><a id='url'> </a></h3>
+
+  <div class="flip-container centered">
+    <div class="flipper">
+       <div class="front"></div>
+       <div id='back-card' class="back">
+         <div id=back1>
+<img id='card-image'  alt="">
+         </div>
+         <div id='back2'>
+          <h1 id='Name'>Name</h1>
+    <p id='about'>About ....</p>
+       <div class="font-a-icons">
+          <div class="icon-group">
+            <span class="bold">College Name : </span><span id='college-name' class="contact"></span>
+            <br>
+            <br>
+             <span class="bold">Phone No : </span><span id='phone' class="contact"></span>
+          <div class="icon-group">
+              <span class="bold">Email </span><a class="contact"  href="mailto:hello@petrusrex.com" target="_top"><span id="email" class="contact"></span></a>
+          </div>
+          <div class="icon-group">
+             <a class="contact" href="http://www.petrusrex.com" target="_blank"><span id="portfolio" class="contact"></span></a>
+          </div>
+       </div>
+    </div>   
+    <a id='linkedin' class="icon-box" target="_blank"><i id='linkedicon'  class="fa fa-linkedin"></i></a>
+    <!-- <a class="icon-box" href="https://twitter.com/Gothburz" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a  class="icon-box" href="https://plus.google.com/u/0/+PetrusRex/" target="_blank"><i class="fa fa-google-plus"></i></a>
+    <a class="icon-box" href="https://www.linkedin.com/in/xpetrus" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <a class="icon-box" href="https://codepen.io/Gothburz/" target="_blank"><i class="fa fa-codepen"></i></a>
+    <a class="icon-box" href="https://github.com/Gothburz" target="_blank"><i class="fa fa-github"></i></a> -->
+  </div>  
+  </div>
+    </div>
+ </div>
+
+</div>
+
+<div  id='template-form'>
+  <!-- <h1>form</h1> -->
+  
+
+<div class="form">
+  <div class="title">Welcome</div>
+  <div class="subtitle">Let's create your Virtual Card!</div>
+  <div class="input-container ic1">
+    <input id="input-name" class="input" type="text" placeholder=" " />
+    <div class="cut"></div>
+    <label for="firstname" class="placeholder">Name</label>
+  </div>
+
+  <div class="input-container ic1">
+    <input id="input-about" class="input" type="text" placeholder=" " />
+    <div class="cut"></div>
+    <label for="input-about" class="placeholder">About</label>
+  </div>
+
+  <div class='two-boxes'>
+
+  <div class="input-container ic2">
+    <input id="input-college-name" class="input" type="text" placeholder=" " />
+    <div class="cut"></div>
+    <label for="lastname" class="placeholder">College name</label>
+  </div>
+  <div class="input-container ic2">
+    <input id="input-phone" class="input" type="text" placeholder=" " />
+    <div class="cut cut-short"></div>
+    <label for="email" class="placeholder">Phone</label>
+  </div>
+</div>
+
+<div class="input-container ic1">
+  <input id="input-email" class="input" type="text" placeholder=" " />
+  <div class="cut"></div>
+  <label for="firstname" class="placeholder">Email</label>
+</div>
+
+<div class="input-container ic1">
+  <input id="input-portfolio" class="input" type="text" placeholder=" " />
+  <div class="cut"></div>
+  <label for="input-portfolio" class="placeholder">Portfolio/Github</label>
+</div>
+
+<div class="input-container ic1">
+  <input id="input-linkedin" class="input" type="text" placeholder=" " />
+  <div class="cut"></div>
+  <label for="input-linkedin" class="placeholder">LinkedIn Url</label>
+</div>
+<div class="input-container ic1">
+  <input id="input-image" class="input" type="file" placeholder=" " />
+  <!-- <div class="cut"></div> -->
+  <!-- <label for="input-image" class="placeholder">LinkedIn Url</label> -->
+</div>
+  <button id='submit-card' type="text" class="submit">submit</button>
+</div>
+
+</div>
+
+
+
+</div>
+
+<!-- <div id='input-form' class="col-xl-12 col-md-12">
+  <form id='card-form' >
+    <div class="mb-1 col-md-4">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input type="email" class="form-control" id="input-name" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">About :</label>
+      <input type="email" class="form-control" id="input-about" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3 col-md-4">
+      <label for="exampleInputEmail1" class="form-label">College Name</label>
+      <input type="email" class="form-control" id="input-college-name" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3 col-md-4">
+      <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+      <input type="email" class="form-control" id="input-phone" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-1">
+      <label for="exampleInputEmail1" class="form-label">Email Adress</label>
+      <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+      <input type="email" class="form-control" id="input-phone" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Portfolio/gitHub</label>
+      <input type="email" id='input-portfolio' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">LinkedIn Url</label>
+      <input type="email" id='input-linkedin'class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Upload Image</label>
+      <input id='input-image' type="file" id='input-linkedin'class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div> -->
+
+
+  <script src="./Card-1.js" defer></script>
+</body>
+</html>

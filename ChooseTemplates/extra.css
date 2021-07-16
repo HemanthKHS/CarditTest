@@ -1,0 +1,9 @@
+.navgrid{
+    grid-template-columns: 1fr 4fr;
+}
+
+#categoryHeading{
+    color:white;
+}
+
+
